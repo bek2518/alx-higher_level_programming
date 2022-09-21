@@ -9,5 +9,3 @@ def uppercase(str):
             asc = asc
         print("{:c}".format(asc), end='')
     print()
-uppercase("z")
-uppercase("Holberton")
