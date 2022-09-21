@@ -7,7 +7,5 @@ def uppercase(str):
             asc = asc
         elif asc > 96 and asc < 123:
             asc = asc - 32
-        if i != len_s - 1:
-            print("{:c}".format(asc), end = '')
-        else:
-            print("{:c}".format(asc))
+            print("{:c}".format(asc), end='')
+        print()
