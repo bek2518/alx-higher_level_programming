@@ -11,4 +11,3 @@ def uppercase(str):
             print("{:c}".format(asc), end = '')
         else:
             print("{:c}".format(asc))
-uppercase("best")
