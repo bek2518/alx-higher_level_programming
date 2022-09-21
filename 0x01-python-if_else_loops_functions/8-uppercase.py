@@ -5,7 +5,7 @@ def uppercase(str):
         asc = ord(str[i])
         if asc > 96 and asc < 123:
             asc = asc - 32
-        else
+        else:
             asc = asc
             print("{:c}".format(asc), end='')
     print()
