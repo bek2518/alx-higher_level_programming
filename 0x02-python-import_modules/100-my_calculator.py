@@ -11,14 +11,16 @@ if __name__ == "__main__":
     a = int(sys.argv[1])
     operator = ord(sys.argv[2])
     b = int(sys.argv[3])
-    if operator == 43:
-        print("{} + {} = {}".format(a, b, add(a, b)))
-    elif operator == 45:
-        print("{} - {} = {}".format(a, b, sub(a, b)))
-    elif operator == 42:
-        print("{} * {} = {}".format(a, b, mul(a, b)))
-    elif operator == 47:
-        print("{} / {} = {}".format(a, b, div(a, b)))
-    else:
+
+    if operator != 43 and operator != 45 and operator != 42 and operator != 47:
         print("Unknown operator. Available operators: +, -, *, and /")
         exit (1)
+
+    if operator == 43:
+        print("{} {:c} {} = {}".format(a, operator, b, add(a, b)))
+    elif operator == 45:
+        print("{} {:c} {} = {}".format(a, operator, b, sub(a, b)))
+    elif operator == 42:
+        print("{} {:c} {} = {}".format(a, operator, b, mul(a, b)))
+    elif operator == 47:
+        print("{} {:c} {} = {}".format(a, operator, b, div(a, b)))
