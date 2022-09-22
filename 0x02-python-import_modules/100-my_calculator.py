@@ -5,22 +5,22 @@ if __name__ == "__main__":
     
     no = len(sys.argv) - 1
     if no != 3:
-        print("Usage: ./100-mycalculator.py <a> <operator> <b>")
+        print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit (1)
     
     a = int(sys.argv[1])
-    operator = sys.argv[2]
+    op = sys.argv[2]
     b = int(sys.argv[3])
 
-    if operator != '+' and operator != '-' and operator != '*' and operator != '/':
+    if op != '+' and op != '-' and op != '*' and op != '/':
         print("Unknown operator. Available operators: +, -, *, and /")
         exit (1)
 
-    if operator == '+':
+    if op == '+':
         print("{} + {} = {}".format(a, b, add(a, b)))
-    elif operator == '-':
+    elif op == '-':
         print("{} - {} = {}".format(a, b, sub(a, b)))
-    elif operator == '*':
+    elif op == '*':
         print("{} * {} = {}".format(a, b, mul(a, b)))
-    elif operator == '/':
+    else:
         print("{} / {} = {}".format(a, b, div(a, b)))
