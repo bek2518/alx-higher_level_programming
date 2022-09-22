@@ -1,3 +1,2 @@
 #!/usr/bin/python3
-alphabets = 'abcdefghijklmnopqrstuvwxyz'
-print(string.isupper())
+from fast_alphabet_103 import *
