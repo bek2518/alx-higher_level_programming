@@ -2,8 +2,9 @@
 '''
 Square class definition
 '''
+
+
 class Square:
-    '''
-    Empty Square class
+    '''Empty Square class
     '''
     pass
