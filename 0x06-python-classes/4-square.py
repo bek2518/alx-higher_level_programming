@@ -20,13 +20,15 @@ class Square:
         else:
             self.__size = size
 
-    def get(self):
+    @property
+    def size(self):
         '''
         Method to get the size
         '''
         return self.__size
 
-    def set(self, value):
+    @size.setter
+    def size(self, value):
         '''
         Set the value
         '''
