@@ -19,6 +19,22 @@ class Square:
             raise ValueError("size must be >= 0")
         else:
             self.__size = size
+    def get(self):
+        '''
+        Method to get the size
+        '''
+        return self.__size
+
+    def set(self, value):
+        '''
+        Set the value
+        '''
+        if type(value) is not int:
+            raise TypeError("size must be an integer")
+        if value < 0:
+            raise ValueError("size must be > 0")
+        else:
+            self.__size = value
 
     def area(self):
         area_size = self.__size * self.__size
