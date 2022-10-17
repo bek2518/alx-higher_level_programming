@@ -92,13 +92,13 @@ class Rectangle:
         '''
         prints the rectangle using print_symbol
         '''
-        rectangle = ""
+        rec = ""
         if self.width == 0 or self.height == 0:
-            return rectangle
+            return rec
         else:
             for i in range(self.height):
-                rectangle = rectangle + (str(self.print_symbol) * self.width) + "\n"
-        return rectangle[:-1]
+                rec = rec + (str(self.print_symbol) * self.width) + "\n"
+        return rec[:-1]
 
     def __repr__(self):
         '''
