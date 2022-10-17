@@ -89,9 +89,9 @@ class Rectangle:
         prints the rectangle using #
         '''
         rectangle = ""
-        if self.__width == 0 or self.__height == 0:
+        if self.width == 0 or self.height == 0:
             return rectangle
         else:
-            for i in range(self.__height):
-                rectangle = rectangle + ("#" * self.__width) + "\n"
+            for i in range(self.height):
+                rectangle = rectangle + ("#" * self.width) + "\n"
         return rectangle
