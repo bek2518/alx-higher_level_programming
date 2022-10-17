@@ -69,6 +69,7 @@ class Rectangle:
         Return:
             area of the rectangle
         '''
+        
         return self.__height * self.__width
 
     def perimeter(self):
@@ -78,7 +79,19 @@ class Rectangle:
             0 if either width or height is zero
             else the rectangle perimeter
         '''
-        if self.__width == 0 or self.__height == 0:
+        if self.__width == 0 or self.__width == 0:
             return 0
         else:
             return (2 * (self.__width + self.__height))
+
+    def __str__(self):
+        '''
+        prints the rectangle using #
+        '''
+        rectangle = ""
+        if self.__width == 0 or self.__height == 0:
+            return rectangle
+        else:
+            for i in range(self.__height):
+                rectangle = rectangle + ("#" * self.__width) + "\n"
+        return rectangle
