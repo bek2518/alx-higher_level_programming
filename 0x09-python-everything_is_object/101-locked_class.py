@@ -6,11 +6,11 @@ from dynamically creating new instance
 
 
 class LockedClass:
-    __slots__ = ['first_name']
+    __slots__ = ["first_name"]
 
     def __init__(self):
         '''
         initialize
         '''
 
-        pass
+        self.first_name = "first_name"
