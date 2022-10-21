@@ -1,4 +1,9 @@
 #!/usr/bin/python3
-add_integer = __import__('0-add_integer').add_integer
+matrix_divided = __import__('2-matrix_divided').matrix_divided
 
-print(add_integer(float('inf')))
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6]
+]
+print(matrix_divided(matrix, 3))
+print(matrix)
