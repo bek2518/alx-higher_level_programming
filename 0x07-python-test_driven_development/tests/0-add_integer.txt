@@ -27,6 +27,14 @@ Add two float numbers:
 >>> add_integer(2.5, 2.5)
 4
 
+Add two negative numbers:
+>>> add_integer(-100, -10)
+-120
+
+Add two negative float numbers:
+>>> add_integer(-2.5, -2.5)
+-4
+
 Addition integer with a string:
 >>> add_integer(4, "School")
 Traceback (most recent call last):
