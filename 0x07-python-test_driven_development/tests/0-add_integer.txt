@@ -29,7 +29,7 @@ Add two float numbers:
 
 Add two negative numbers:
 >>> add_integer(-100, -10)
--120
+-110
 
 Add two negative float numbers:
 >>> add_integer(-2.5, -2.5)
@@ -69,10 +69,10 @@ Passing NaN:
 >>> add_integer(float('nan'))
 Traceback (most recent call last):
 ...
-ValueError: cannot convert float Nan to integer
+ValueError: cannot convert float NaN to integer
 
 Passing Infinity:
 >>> add_integer(float('inf'))
 Traceback (most recent call last):
 ...
-OverFlowError: cannot convert float infinity to integer
+OverflowError: cannot convert float infinity to integer
