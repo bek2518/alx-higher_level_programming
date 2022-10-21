@@ -19,19 +19,19 @@ Passing integer to first name:
 >>> say_my_name(12, "White")
 Traceback (most recent call last):
 ...
-TypeError: first name must be a string
+TypeError: first_name must be a string
 
 Passing integer to last_name:
 >>> say_my_name("John", 12)
 Traceback (most recent call last):
 ...
-TypeError: last name must be a string
+TypeError: last_name must be a string
 
 Passing integer to both names:
 >>> say_my_name(12, 24)
 Traceback (most recent call last):
 ...
-TypeError: first name must be a string
+TypeError: first_name must be a string
 
 Passing characters to first name:
 >>> say_my_name('a', "White")
