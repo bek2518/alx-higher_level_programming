@@ -52,3 +52,15 @@ Adding a tuple
 Traceback (most recent call last):
 ...
 TypeError: a must be an integer
+
+Passing NaN
+>>> add_integer(float('nan'))
+Traceback (most recent call last):
+...
+ValueError: cannot convert float Nan to integer
+
+Passing Infinity
+>>> add_integer(float('inf'))
+Traceback (most recent call last):
+...
+OverFlowError: cannot convert float infinity to integer
