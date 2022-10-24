@@ -29,12 +29,6 @@ class BaseGeometry:
         if value <= 0:
             raise ValueError("{:s} must be greater than 0".format(name))
 
-
-'''
-Rectangle class
-'''
-
-
 class Rectange(BaseGeometry):
     '''
     Rectangle class that inherits from BaseGeometry
