@@ -24,16 +24,8 @@ class Rectange(BaseGeometry):
     Rectangle class that inherits from BaseGeometry
     '''
 
-    def __init__(self, width, height):
-        '''
-        Function that instantiates width and height
-
-        Args:
-            width: width
-            height: height
-        '''
-
-        self.__width = width
-        self.__height = heigh
+    def __init__(self, width, height)
         BaseGeometry.integer_validator(self, "width", self.__width)
         BaseGeometry.integer_validator(self, "height", self.__height)
+        self.__width = width
+        self.__height = height
