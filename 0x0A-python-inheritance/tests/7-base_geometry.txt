@@ -7,6 +7,11 @@ Using ''BaseGeometry''
 Import Function:
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
+Test for Type:
+>>> bg = BaseGeometry()
+>>> type(bg) is BaseGeometry
+True
+
 Print area:
 >>> bg = BaseGeometry()
 >>> bg.area()
