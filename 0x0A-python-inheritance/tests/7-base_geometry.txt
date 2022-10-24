@@ -8,54 +8,54 @@ Import Function:
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 Print area:
->>> bg = BaseGeometry
+>>> bg = BaseGeometry()
 >>> bg.area()
 Traceback (most recent call last):
 ...
 Exception: area() is not implemented
 
 Passing integer to value:
->>> bg = BaseGeometry
+>>> bg = BaseGeometry()
 >>> bg.integer_validator("name", 7)
 
 
 Passing a string to value:
->>> bg = BaseGeometry
+>>> bg = BaseGeometry()
 >>> bg.integer_validator("name", "7")
 Traceback (most recent call last):
 ...
 TypeError: name must be an integer
 
 Passing None to value:
->>> bg = BaseGeometry
+>>> bg = BaseGeometry()
 >>> bg.integer_validator("name", None)
 Traceback (most recent call last):
 ...
 TypeError: name must be an integer
 
 Passing a negative value:
->>> bg = BaseGeometry
+>>> bg = BaseGeometry()
 >>> bg.integer_validator("name", -7)
 Traceback (most recent call last):
 ...
 ValueError: name must be greater than 0
 
 Passing a value 0:
->>> bg = BaseGeometry
+>>> bg = BaseGeometry()
 >>> bg.integer_validator("name", 0)
 Traceback (most recent call last):
 ...
 ValueError: name must be greater than 0
 
 Passing one argument to integer_validator:
->>> bg = BaseGeometry
+>>> bg = BaseGeometry()
 >>> bg.integer_validator("name")
 Traceback (most recent call last):
 ...
 TypeError: integer_validator() missing 1 required positional argument: 'value'
 
 Passing no arguments to integer_validator:
-bg = BaseGeometry
+bg = BaseGeometry()
 bg.integer_validator()
 Traceback (most recent call last):
 ...
