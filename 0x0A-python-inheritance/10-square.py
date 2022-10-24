@@ -4,7 +4,7 @@ This module creates a class that inherits Rectangle class
 '''
 
 
-Rectangle = __import__('9-Rectangle').Rectangle
+Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
