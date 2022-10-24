@@ -48,6 +48,7 @@ class Rectange(BaseGeometry):
             width: width
             height: height
         '''
+
         self.__width = width
         self.__height = heigh
         BaseGeometry.integer_validator(self, "width", self.__width)
