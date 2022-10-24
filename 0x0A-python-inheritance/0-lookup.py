@@ -5,7 +5,7 @@ def lookup(obj):
     and methods of an object
 
     Args:
-        obj: object
+        obj: instance of the class
     '''
 
     return dir(obj)
