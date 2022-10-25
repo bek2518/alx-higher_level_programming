@@ -4,7 +4,7 @@ student class
 '''
 
 
-class student:
+class Student:
     '''
     Class that defines student
     '''
@@ -29,4 +29,3 @@ class student:
         '''
 
         return self.__dict__
-
