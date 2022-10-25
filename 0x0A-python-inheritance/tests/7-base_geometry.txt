@@ -65,3 +65,31 @@ bg.integer_validator()
 Traceback (most recent call last):
 ...
 TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+Passing Tuple:
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("name", (2,1))
+Traceback (most recent call last):
+...
+TypeError: name must be an integer
+
+Passing list:
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("name", [2, 1])
+Traceback (most recent call last):
+...
+TypeError: name must be an integer
+
+Passing Boolean:
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("name", True)
+Traceback (most recent call last):
+...
+TypeError: name must be an integer
+
+Passing:
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("name", {2, 1})
+Traceback (most recent call last):
+...
+TypeError: name must be an integer
