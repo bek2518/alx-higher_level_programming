@@ -5,7 +5,7 @@ save_to_json_file function
 import json
 
 
-def from_json_string(my_obj):
+def save_to_json_file(my_obj, filename):
     '''
     writes an Object to a text file using JSON representation
 
