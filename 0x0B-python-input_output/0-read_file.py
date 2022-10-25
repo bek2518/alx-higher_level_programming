@@ -7,7 +7,7 @@ read_file function
 def read_file(filename=""):
     '''
     Reads a text file and prints to stdout
-    
+
     Args:
         filename: filename
     '''
