@@ -5,7 +5,7 @@ load_from_json_file function
 import json
 
 
-def load_from_json_file(my_obj, filename):
+def load_from_json_file(filename):
     '''
     Function that creates an object from JSON file
 
@@ -14,5 +14,5 @@ def load_from_json_file(my_obj, filename):
         filename: file name
     '''
 
-    with open(filename, 'w', encoding="utf-8") as f:
-        f.write(json.loads(my_obj))
+    with open(filename, 'r', encoding="utf-8") as f:
+        return json.loads(f)
