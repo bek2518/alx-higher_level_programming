@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 '''
-add_item
+Module that adds all arguments to python list
+and save them to file
 '''
 
 
