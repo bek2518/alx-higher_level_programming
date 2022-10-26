@@ -28,4 +28,11 @@ class Student:
         Retreives dictionary representation of student
         '''
 
-        return self.__dict__
+        if attrs is not None and all(isinstance(x, str) for x in attrs):
+            d = {}
+            for k, v in self.__dict__.items():
+                if k in attrs:
+                    d[k] = v
+            return d
+        else:
+            return self.__dict__
