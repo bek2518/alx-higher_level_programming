@@ -8,7 +8,7 @@ def append_after(filename="", search_string="", new_string=""):
     '''
     Function that inserts a line of text to a file after
     each line with a specific string
-    
+
     Args:
         filename: filename
         search_string: string to be searched
