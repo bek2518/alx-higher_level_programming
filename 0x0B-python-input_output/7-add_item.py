@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-'''
+"""
 Module that adds all arguments to python list
 and save them to file
-'''
+"""
 
 
 import json
