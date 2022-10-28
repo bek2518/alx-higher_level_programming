@@ -2,7 +2,7 @@
 '''
 Create Rectangle class that inherits from Base
 '''
-from base import Base
+from models.base import Base
 
 
 class Rectangle(Base):
@@ -66,4 +66,8 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
-        return (self.__width * self.__height)
+        return (self.width * self.height)
+
+    def display(self):
+        for i in range(self.__height):
+            print('#' * self.width)
