@@ -95,20 +95,16 @@ class Square(Rectangle):
                 if i == 0:
                     self.id = args[i]
                 elif i == 1:
-                    self.weigth = args[i]
+                    self.size = args[i]
                 elif i == 2:
-                    self.height = args[i]
-                elif i == 3:
                     self.x = args[i]
-                elif i == 4:
+                elif i == 3:
                     self.y = args[i]
         else:
             if 'id' in kwargs.keys():
                 self.id = kwargs['id']
-            if 'width' in kwargs.keys():
-                self.width = kwargs['width']
-            if 'height' in kwargs.keys():
-                self.height = kwargs['height']
+            if 'size' in kwargs.keys():
+                self.size = kwargs['size']
             if 'x' in kwargs.keys():
                 self.x = kwargs['x']
             if 'y' in kwargs.keys():
