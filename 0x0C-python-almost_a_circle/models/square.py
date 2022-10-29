@@ -1,21 +1,18 @@
 #!/usr/bin/python3
 '''
-Create Rectangle class that inherits from Base
+Create Square class
 '''
-from models.base import Base
+from models.rectangle import Rectangle
 
 
-class Rectangle(Base):
+class Square(Rectangle):
     '''
-    Rectangle class that inherits from base
+    Square class that inherits from Rectangle class
     '''
 
-    def __init__(self, width, height, x=0, y=0, id=None):
-        self.width = width
-        self.height = height
-        self.x = x
-        self.y = y
-        super().__init__(id)
+    def __init__(self, size, x=0, y=0, id=None):
+        super().__init__(size, size, x, y, id)
+        self.size = size
 
     @property
     def width(self):
@@ -66,7 +63,7 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
-        return (self.width * self.height)
+        return (self.size * self.size)
 
     def display(self):
         for j in range(self.y):
@@ -75,7 +72,7 @@ class Rectangle(Base):
             print(' ' * self.x + '#' * self.width)
 
     def __str__(self):
-        return (("[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}")
+        return (("[Square] ({:d}) {:d}/{:d} - {:d}/{:d}")
                 .format(self.id, self.x, self.y, self.width, self.height))
 
     def update(self, *args, **kwargs):
@@ -92,7 +89,7 @@ class Rectangle(Base):
                 elif i == 4:
                     self.y = args[i]
         else:
-            if 'id'  in kwargs.keys():
+            if 'id' in kwargs.keys():
                 self.id = kwargs['id']
             if 'width' in kwargs.keys():
                 self.width = kwargs['width']
