@@ -11,15 +11,36 @@ class Square(Rectangle):
     '''
 
     def __init__(self, size, x=0, y=0, id=None):
+        '''
+        Initialize
+
+        Args:
+            size: width/ height of square
+            x: axis x
+            y: axis y
+            id: id
+        '''
+
         super().__init__(size, size, x, y, id)
         self.size = size
 
     @property
     def size(self):
+        '''
+        Getter for size
+        '''
+
         return self.__size
 
     @size.setter
     def size(self, value):
+        '''
+        Setter for size
+
+        Args:
+            size: size of square
+        '''
+
         if type(value) is not int:
             raise TypeError("width must be an integer")
         elif value <= 0:
@@ -30,10 +51,21 @@ class Square(Rectangle):
 
     @property
     def width(self):
+        '''
+        Getter for width
+        '''
+
         return self.__width
 
     @width.setter
     def width(self, value):
+        '''
+        Setter for width
+
+        Args:
+            value: value
+        '''
+
         if type(value) is not int:
             raise TypeError("width must be an integer")
         elif value <= 0:
@@ -42,10 +74,21 @@ class Square(Rectangle):
 
     @property
     def height(self):
+        '''
+        Getter for height
+        '''
+
         return self.__height
 
     @height.setter
     def height(self, value):
+        '''
+        Setter for height
+
+        Args:
+            value: value
+        '''
+
         if not isinstance(value,  int):
             raise TypeError("height must be an integer")
         elif value <= 0:
@@ -54,10 +97,21 @@ class Square(Rectangle):
 
     @property
     def x(self):
+        '''
+        Getter for x
+        '''
+
         return self.__x
 
     @x.setter
     def x(self, value):
+        '''
+        Setter for x
+
+        Args:
+            value: value
+        '''
+
         if type(value) is not int:
             raise TypeError("x must be an integer")
         elif value < 0:
@@ -66,10 +120,21 @@ class Square(Rectangle):
 
     @property
     def y(self):
+        '''
+        Getter for y
+        '''
+
         return self.__y
 
     @y.setter
     def y(self, value):
+        '''
+        Setter for y
+
+        Args:
+            value: value
+        '''
+
         if type(value) is not int:
             raise TypeError("y must be an integer")
         elif value < 0:
@@ -77,19 +142,39 @@ class Square(Rectangle):
         self.__y = value
 
     def area(self):
+        '''
+        Calculates the area of a square
+        '''
+
         return (self.size * self.size)
 
     def display(self):
+        '''
+        Displays the square
+        '''
+
         for j in range(self.y):
             print()
         for i in range(self.__height):
             print(' ' * self.x + '#' * self.width)
 
     def __str__(self):
+        '''
+        Overwrites the __str__
+        '''
+
         return (("[Square] ({:d}) {:d}/{:d} - {:d}")
                 .format(self.id, self.x, self.y, self.width or self.height))
 
     def update(self, *args, **kwargs):
+        '''
+        Assigns an argument to each attribute
+
+        Args:
+            *args: non key worded
+            **kwargs: key-worded
+        '''
+
         if args:
             for i in range(len(args)):
                 if i == 0:
@@ -111,5 +196,9 @@ class Square(Rectangle):
                 self.y = kwargs['y']
 
     def to_dictionary(self):
-        return {'id': self.id, 'size': self.size, 
+        '''
+        Returns dictionary representation of square
+        '''
+
+        return {'id': self.id, 'size': self.size,
                 'x': self.x, 'y': self.y}
