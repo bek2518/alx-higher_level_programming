@@ -60,11 +60,28 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
-        '''
-        Returns list of json string representation of json_string
-        '''
+        ''' Returns list of json string representation of json_string '''
 
         if json_string is None or len(json_string) == 0:
             return ([])
         else
             return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        ''' returns an instance with all attr set '''
+        if cls.__name__ == 'Rectangle':
+            new = cls(1, 1)
+        if cls.__name__ == 'Square':
+            new = cls(1)
+        new.update(**dictionary)
+        return new
+
+    @classmethod
+    def load_from_file(cls):
+        try:
+            with open(cls.__name__ + '.json', 'r') as f:
+                dict_list = cls.from_json_string(f.read())
+            return ([cls.create(**x) for x in dict_list])
+        except FileNotFoundError:
+            return []
