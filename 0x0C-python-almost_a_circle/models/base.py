@@ -63,7 +63,5 @@ class Base:
         '''
         Returns list of json string representation of json_string
         '''
-        if json_string is None:
-            return ([])
-        else:
-            return json.loads(json_string)
+
+        return json.loads(json_string or '[]')
