@@ -63,6 +63,7 @@ class Base:
         '''
         Returns list of json string representation of json_string
         '''
+
         if json_string is None or len(json_string) == 0:
             return ([])
         else
