@@ -57,3 +57,12 @@ class Base:
             json_string = '[]'
         with open(cls.__name__ + '.json', 'w') as f:
             f.write(json_string)
+
+    @classmethod
+    def from_json_string(json_string):
+        '''
+        Returns list of json string representation of json_string
+        '''
+        if json_string is None:
+            return ([])
+        return json.loads(json_string)
