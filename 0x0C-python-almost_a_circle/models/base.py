@@ -58,7 +58,7 @@ class Base:
         with open(cls.__name__ + '.json', 'w') as f:
             f.write(json_string)
 
-    @classmethod
+    @staticmethod
     def from_json_string(json_string):
         '''
         Returns list of json string representation of json_string
