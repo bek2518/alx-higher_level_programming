@@ -128,3 +128,32 @@ class Base:
         except(Exception):
             pass
         return(my_obj)
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """Opens a window and draws Rectangles and Squares"""
+        draw = turtle.Turtle()
+
+        for rectangle in list_rectangles:
+            draw.showturtle()
+            draw.up()
+            draw.goto(rectangle.x, rectangle.y)
+            draw.down()
+            for i in range(2):
+                draw.forward(rectangle.width)
+                draw.left(90)
+                draw.forward(rectangle.height)
+                draw.left(90)
+            draw.hideturtle()
+
+        for square in list_squares:
+            draw.showturtle()
+            draw.up()
+            draw.goto(square.x, square.y)
+            draw.down()
+            for i in range(2):
+                draw.forward(square.width)
+                draw.left(90)
+                draw.forward(square.height)
+                draw.left(90)
+            draw.hideturtle()
