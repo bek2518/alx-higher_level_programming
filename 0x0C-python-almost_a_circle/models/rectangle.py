@@ -158,7 +158,7 @@ class Rectangle(Base):
                 if i == 0:
                     self.id = args[i]
                 elif i == 1:
-                    self.weigth = args[i]
+                    self.width = args[i]
                 elif i == 2:
                     self.height = args[i]
                 elif i == 3:
