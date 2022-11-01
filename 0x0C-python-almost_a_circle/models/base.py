@@ -3,6 +3,7 @@
 Create a Base class
 '''
 import json
+import os.path
 
 
 class Base:
@@ -76,6 +77,26 @@ class Base:
             new = cls(1)
         new.update(**dictionary)
         return new
+
+    @classmethod
+    def load_from_file(cls):
+        try:
+            with open(cls.__name__ + '.json', 'r') as f:
+                dict_list = cls.from_json_string(f.read())
+            return ([cls.create(**x) for x in dict_list])
+        except FileNotFoundError:
+            return []
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        ''' writes the JSON string representation of list_objst to a file '''
+        try:
+            json_string = cls.to_json_string(
+                [x.to_dictionary() for x in list_objs])
+        except BaseException:
+            json_string = '[]'
+        with open(cls.__name__ + '.json', 'w') as f:
+            f.write(json_string)
 
     @classmethod
     def load_from_file(cls):
