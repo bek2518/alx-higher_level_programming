@@ -14,18 +14,13 @@ if (process.argv.length <= 3) {
     secondBiggest = Number(process.argv[3]);
   }
 
-  if (process.argv.length > 4){
+  if (process.argv.length > 4) {
     for (let i = 4; i < process.argv.length; i++) {
       if (biggest > process.argv[i]) {
-        if (secondBiggest > Number(process.argv[i])) {
-          biggest = biggest;
-          secondBiggest = secondBiggest;
-        } else {
-          biggest = biggest;
+        if (secondBiggest < Number(process.argv[i])) {
           secondBiggest = Number(process.argv[i]);
         }
-      }
-      else {
+      } else {
         secondBiggest = biggest;
         biggest = process.argv[i];
       }
