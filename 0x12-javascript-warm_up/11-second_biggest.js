@@ -22,7 +22,7 @@ if (process.argv.length <= 3) {
         }
       } else {
         secondBiggest = biggest;
-        biggest = process.argv[i];
+        biggest = Number(process.argv[i]);
       }
     }
   }
