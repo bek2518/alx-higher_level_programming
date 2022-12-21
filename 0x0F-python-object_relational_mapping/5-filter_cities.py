@@ -18,7 +18,10 @@ if __name__ == '__main__':
         state_id=states.id WHERE states.name LIKE BINARY (%s) \
             ORDER BY cities.id", (sys.argv[4],))
     rows = c.fetchall()
+    list = ""
     for row in rows:
-        print(row)
+        for col in row:
+            list += col + ", "
+    print (list[:-2])
     c.close()
     db.close()
