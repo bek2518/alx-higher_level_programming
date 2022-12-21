@@ -22,6 +22,6 @@ if __name__ == '__main__':
     for row in rows:
         for col in row:
             list += col + ", "
-    print (list[:-2])
+    print(list[:-2])
     c.close()
     db.close()
