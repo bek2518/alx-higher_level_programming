@@ -2,7 +2,7 @@
 
 '''
 Script that lists all states from the database
-with the name starting with 'N'
+matching the argument name passed
 '''
 
 import MySQLdb
@@ -14,8 +14,8 @@ if __name__ == '__main__':
                          passwd=sys.argv[2], db=sys.argv[3])
 
     c = db.cursor()
-    c.execute("SELECT * FROM states WHERE name LIKE BINARY 'N%' \
-        ORDER BY states.id")
+    c.execute("SELECT * FROM states WHERE name LIKE BINARY '{:s}' \
+        ORDER BY states.id".format(sys.argv[4]))
     rows = c.fetchall()
     for row in rows:
         print(row)
