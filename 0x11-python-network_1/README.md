@@ -23,3 +23,5 @@ No | File | Description
 6 | 5-hbtn_header.py | Takes in URL and display value of variable in header using requests
 7 | 6-post_email.py | Sends a POST to passed URL with email as parameter using requests
 8| 7-error_code.py | Sends request to URL and displays error code if status code >= 400
+9 | 8-json_api.py | In progress
+10 | 10-my_github.py | Takes github credentials as parameter and displays user ID
