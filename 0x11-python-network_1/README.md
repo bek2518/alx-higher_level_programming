@@ -21,4 +21,5 @@ No | File | Description
 4 | 3-error_code.py | Python script that sends request to URL and Manages HTTPError exception
 5 | 4-hbtn_status.py | Fetches intranet status using requests
 6 | 5-hbtn_header.py | Takes in URL and display value of variable in header using requests
-7 | 6-post_email.py | Snds a POST to passed URL with email as parameter using requests
+7 | 6-post_email.py | Sends a POST to passed URL with email as parameter using requests
+8| 7-error_code.py | Sends request to URL and displays error code if status code >= 400
