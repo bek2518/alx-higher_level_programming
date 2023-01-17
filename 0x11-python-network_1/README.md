@@ -2,7 +2,7 @@
 
 ## Learning Objectives
 
-* How tp fetch internet resources with Python package urllib
+* How to fetch internet resources with Python package urllib
 * How to decode urllib body response
 * How to use the Python package requests
 * How to make HTTP GET request
@@ -17,3 +17,5 @@ No | File | Description
 ---|---|---
 1 | 0-hbtn_status.py | Python script that fetches intranet status
 2 | 1-hbtn_header.py | Python script that takes in URL and display value of variable in header
+3 | 2-post_email.py | Python script that sends a POST to passed URL with email as parameter
+4 | 3-error_code.py | Python script that sends request to URL and Manages HTTPError exception
