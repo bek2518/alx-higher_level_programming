@@ -15,7 +15,8 @@
 ---
 No | File | Description
 ---|---|---
-1 | 0-hbtn_status.py | Python script that fetches intranet status
+1 | 0-hbtn_status.py | Python script that fetches intranet status using urllib
 2 | 1-hbtn_header.py | Python script that takes in URL and display value of variable in header
 3 | 2-post_email.py | Python script that sends a POST to passed URL with email as parameter
 4 | 3-error_code.py | Python script that sends request to URL and Manages HTTPError exception
+5 | 4-hbtn_status.py | Fetches intranet status using requests
