@@ -14,13 +14,11 @@ else:
 
 response = requests.post(url, data={'q': value})
 try:
-    response.json.loads()
+    if response.json == {}:
+        print("No result")
+
 except ValueError:
     print("Not a valid JSON")
 
-with open(response.json) as file:
-    data = json.load(file)
-    if not data:
-        print("No result")
 
 print("[{}] {}".format(response.get('id'), response.get('name')))
