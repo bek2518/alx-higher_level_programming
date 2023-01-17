@@ -6,19 +6,19 @@ with letter as parameter
 import requests
 import sys
 
-url = "http://0.0.0.0:5000/search_user"
-if len(sys.argv) == 2:
-    value = sys.argv[1]
-else:
-    value = ""
+if __name__ == '__main__':
+    url = "http://0.0.0.0:5000/search_user"
+    if len(sys.argv) == 2:
+        value = sys.argv[1]
+    else:
+        value = ""
 
-response = requests.post(url, data={'q': value})
-try:
-    if response.json == {}:
-        print("No result")
+    response = requests.post(url, data={'q': value})
+    try:
+        if response.json == {}:
+            print("No result")
 
-except ValueError:
-    print("Not a valid JSON")
+    except ValueError:
+        print("Not a valid JSON")
 
-
-print("[{}] {}".format(response.get('id'), response.get('name')))
+    print("[{}] {}".format(response.get('id'), response.get('name')))
