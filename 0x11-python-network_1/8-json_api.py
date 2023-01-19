@@ -16,11 +16,10 @@ if __name__ == '__main__':
 
     response = requests.post(url, data={'q': value})
     try:
-        if response.json == {} or not response.json.get('id') or\
-                        not not response.json.get('name'):
+        if response.json == {}:
             print("No result")
 
-    except:
+    except ValueError:
         print("Not a valid JSON")
 
     else:
