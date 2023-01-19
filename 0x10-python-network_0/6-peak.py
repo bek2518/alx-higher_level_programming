@@ -5,6 +5,9 @@ Function that finds a peak in a list of unsorted integers
 
 
 def find_peak(list_of_integers):
+    '''
+    Function that sorts through a list in recursive manner and finds the peak
+    '''
     list = list_of_integers
 
     if len(list) == 0:
