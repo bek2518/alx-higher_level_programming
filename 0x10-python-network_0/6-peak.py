@@ -17,12 +17,7 @@ def find_peak(list_of_integers):
         return list[0]
 
     elif len(list) == 2:
-        a = list[0]
-        b = list[1]
-        return (max(a, b))
+        return (max(list[0], list[1]))
 
     half = len(list) // 2
-
-    c = find_peak(list[:half])
-    d = find_peak(list[half:])
-    return (max(c, d))
+    return (max(find_peak(list[:half]), find_peak(list[half:])))
