@@ -13,3 +13,4 @@ This project works on JS
 ---
 No | File | Description
 ---|---|---
+1 | 0-readme.js | Prints the content of a file
