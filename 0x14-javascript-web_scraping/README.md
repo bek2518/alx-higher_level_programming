@@ -14,3 +14,6 @@ This project works on JS
 No | File | Description
 ---|---|---
 1 | 0-readme.js | Prints the content of a file
+2 | 1-writeme.js | Writes a strign given as argument to a file
+3 | 2-statuscode.js | Displays status code of URL given as an argument
+4 |
