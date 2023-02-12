@@ -11,8 +11,7 @@ request(starWarsApi, function (error, response, body) {
     let counter = 0;
     for (let i = 0; i < result.length; i++) {
       for (let j = 0; j < result[i].characters.length; j++) {
-        const comparator = 'https://swapi-api.alx-tools.com/api/people/18/';
-        if ((result[i].characters[j]) === comparator) {
+        if ((result[i].characters[j]).includes('18')) {
           counter++;
         }
       }
